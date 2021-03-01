@@ -46,7 +46,7 @@ const Carousel = () => {
         TweenLite.to(card, {
           duration: 0.5,
           opacity: 0,
-          x: `${parentWidth / 2 + IMAGE_WIDTH / 2}px`,
+          x: `${IMAGE_WIDTH * 0.1}px`,
           scale: 0.7,
           zIndex: 9,
           rotate: 6,

@@ -1,0 +1,48 @@
+.item {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .card {
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    transform-origin: center bottom;
+  }
+  .card-text {
+    color: black;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 40px;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &.is-next,
+  &.is-prev {
+    .next-btn {
+      opacity: 0;
+      transition: all 200ms linear 0s;
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translateX(50px);
+      color: black;
+      z-index: 11;
+    }
+
+    &:hover {
+      .next-btn {
+        opacity: 1;
+      }
+    }
+  }
+}
